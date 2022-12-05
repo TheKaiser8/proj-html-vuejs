@@ -44,11 +44,11 @@ export default {
     display: flex;
     align-items: center;
     li {
-      display: flex;
-      align-items: center;
       list-style: none;
       padding: 1rem;
       a {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         color: inherit;
         .chevron-down {

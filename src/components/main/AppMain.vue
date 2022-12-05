@@ -1,16 +1,16 @@
 <script>
+import AppHero from "./AppHero.vue";
+
 export default {
   name: "AppMain",
-  data() {
-    return {};
+  components: {
+    AppHero,
   },
 };
 </script>
 
 <template>
-  <div class="container">
-    <h1>Main</h1>
-  </div>
+  <AppHero />
 </template>
 
 <style lang="scss" scoped></style>

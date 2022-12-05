@@ -1,6 +1,6 @@
 <script>
 import AppHeader from "./components/header/AppHeader.vue";
-import AppMain from "./components/AppMain.vue";
+import AppMain from "./components/main/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {

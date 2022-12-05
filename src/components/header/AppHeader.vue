@@ -13,7 +13,7 @@ export default {
   <header>
     <div class="container">
       <div class="logo">
-        <img src="../assets/img/dark-logo.png" alt="Logo" />
+        <img src="../../assets/img/dark-logo.png" alt="Logo" />
       </div>
       <NavHeader />
     </div>

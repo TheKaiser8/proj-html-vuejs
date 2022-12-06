@@ -73,6 +73,13 @@ export default {
             src="../../assets/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
             alt="Hero image"
           />
+          <div class="bg-img grey-dots">
+            <img
+              v-for="n in 2"
+              src="../../assets/img/maxcoach-shape-08.png"
+              class="grey-dots__item"
+            />
+          </div>
         </div>
       </div>
       <div class="row client">
@@ -124,8 +131,21 @@ export default {
     .col-small60 {
       width: 60%;
       text-align: right;
+      position: relative;
       .hero-image {
         border-radius: 50%;
+      }
+      .bg-img {
+        position: absolute;
+        top: 40%;
+        left: -6%;
+        z-index: -1;
+        transform: translate(50%, -50%);
+        transform: rotate(270deg);
+
+        .grey-dots__item {
+          margin-right: 1rem;
+        }
       }
     }
     &.client {

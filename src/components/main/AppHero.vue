@@ -1,12 +1,43 @@
 <script>
+import ClientHero from "./ClientHero.vue";
+
 export default {
   name: "AppHero",
+  components: {
+    ClientHero,
+  },
   data() {
     return {
       hero: {
         title: "Distant learning for further expansion",
         text: "Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.",
       },
+      clients: [
+        {
+          img: "src/assets/img/client-logo-01.png",
+          name: "Stylus",
+        },
+        {
+          img: "src/assets/img/client-logo-02.png",
+          name: "Tree",
+        },
+        {
+          img: "src/assets/img/client-logo-03.png",
+          name: "Brook",
+        },
+        {
+          img: "src/assets/img/client-logo-04.png",
+          name: "Pencil",
+        },
+        {
+          img: "src/assets/img/client-logo-05.png",
+          name: "Its Alive!",
+        },
+        {
+          img: "src/assets/img/client-logo-06.png",
+          name: "Sixbase",
+        },
+      ],
     };
   },
 };
@@ -15,30 +46,35 @@ export default {
 <template>
   <section id="hero">
     <div class="container">
-      <div class="col-small40">
-        <h1 class="hero-title">{{ hero.title }}</h1>
-        <p class="hero-text">{{ hero.text }}</p>
-        <button class="btn-green">
-          <font-awesome-icon
-            icon="fa-solid fa-download"
-            class="download-icon"
+      <div class="row">
+        <div class="col-small40">
+          <h1 class="hero-title">{{ hero.title }}</h1>
+          <p class="hero-text">{{ hero.text }}</p>
+          <button class="btn-green">
+            <font-awesome-icon
+              icon="fa-solid fa-download"
+              class="download-icon"
+            />
+            Download free guide
+          </button>
+          <small class="small-text">
+            Have questions?
+            <strong class="text-green">
+              Get Free Sample
+              <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+            </strong>
+          </small>
+        </div>
+        <div class="col-small60">
+          <img
+            class="hero-image"
+            src="../../assets/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
+            alt="Hero image"
           />
-          Download free guide
-        </button>
-        <small class="small-text">
-          Have questions?
-          <strong class="text-green">
-            Get Free Sample
-            <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
-          </strong>
-        </small>
+        </div>
       </div>
-      <div class="col-small60">
-        <img
-          class="hero-image"
-          src="../../assets/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
-          alt="Hero image"
-        />
+      <div class="row client">
+        <ClientHero v-for="client in clients" :infoClient="client" />
       </div>
     </div>
   </section>
@@ -51,7 +87,7 @@ export default {
   padding: 3.75rem 0;
   color: var(--third-text-color);
 
-  .container {
+  .row {
     display: flex;
     align-items: center;
     .col-small40 {
@@ -87,6 +123,12 @@ export default {
       .hero-image {
         border-radius: 50%;
       }
+    }
+    &.client {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2rem;
+      margin-top: 3.5rem;
     }
   }
 }

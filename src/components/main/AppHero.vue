@@ -59,10 +59,12 @@ export default {
           </button>
           <small class="small-text">
             Have questions?
-            <strong class="text-green">
-              Get Free Sample
-              <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
-            </strong>
+            <a class="small-text__link" href="#">
+              <strong class="text-green">
+                Get Free Sample
+                <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+              </strong>
+            </a>
           </small>
         </div>
         <div class="col-small60">
@@ -111,9 +113,11 @@ export default {
       }
       .small-text {
         margin-top: 1.875rem;
-
-        .text-green {
-          color: var(--primary-color);
+        .small-text__link {
+          text-decoration: none;
+          .text-green {
+            color: var(--primary-color);
+          }
         }
       }
     }

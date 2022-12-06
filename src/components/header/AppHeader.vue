@@ -29,6 +29,7 @@ header {
   right: 0;
   z-index: 100;
   box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 20%);
+  background-color: #fff;
 
   .container {
     display: flex;

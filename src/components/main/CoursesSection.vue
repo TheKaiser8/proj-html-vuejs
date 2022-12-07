@@ -109,7 +109,7 @@ export default {
     text-align: center;
   }
   .courses-section-header__title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--second-text-color);
   }
   .row {

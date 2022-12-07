@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      currentActiveIndex: 1,
       reviews: [
         {
           title: "It's a choice of quality for people with special needs",
@@ -40,6 +41,11 @@ export default {
       ],
     };
   },
+  methods: {
+    onClickReview(i) {
+      this.currentActiveIndex = i;
+    },
+  },
 };
 </script>
 
@@ -52,8 +58,12 @@ export default {
       </h2>
     </div>
     <div class="row">
-      <div class="col" v-for="review in reviews">
-        <ReviewCard :infoReview="review" />
+      <div class="col" v-for="(review, index) in reviews">
+        <ReviewCard
+          :infoReview="review"
+          :class="{ active: index === currentActiveIndex }"
+          @click="onClickReview(index)"
+        />
       </div>
     </div>
     <div class="reviews-section-footer">

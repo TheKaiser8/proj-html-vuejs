@@ -37,6 +37,13 @@ export default {
   background-color: var(--third-bg-color);
   margin: 0 1.5rem;
   border-radius: 0.3125rem;
+  filter: opacity(0.5);
+  cursor: pointer;
+
+  &.active {
+    filter: opacity(1);
+  }
+
   .review-card__title {
     color: var(--second-text-color);
     margin-bottom: 1.5rem;

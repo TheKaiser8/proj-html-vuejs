@@ -14,6 +14,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { faFileLines } from "@fortawesome/free-regular-svg-icons";
+import { faStamp } from "@fortawesome/free-solid-svg-icons";
 
 /* import same icons with different style (use alias) */
 
@@ -24,7 +25,8 @@ library.add(
   faMagnifyingGlass,
   faDownload,
   faArrowRightLong,
-  faFileLines
+  faFileLines,
+  faStamp
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

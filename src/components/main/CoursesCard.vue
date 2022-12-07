@@ -1,6 +1,9 @@
 <script>
 export default {
   name: "CoursesCard",
+  props: {
+    infoCourses: Object,
+  },
 };
 </script>
 
@@ -8,21 +11,25 @@ export default {
   <div class="courses-card">
     <img
       class="courses-card__img"
-      src="../../assets/img/course-02-480x298.jpg"
-      alt=""
+      :src="`src/assets/img/${infoCourses.img}`"
+      :alt="infoCourses.title"
     />
     <div class="courses-card__info">
-      <strong class="text-green">$40.<small>00</small></strong>
-      <h4 class="courses-card__info--title">
-        Learning to Write as a Professional Author
-      </h4>
+      <strong class="courses-card__info--price"
+        >{{ infoCourses.price.integer
+        }}<small>{{ infoCourses.price.cents }}</small>
+      </strong>
+      <h4 class="courses-card__info--title">{{ infoCourses.title }}</h4>
       <small>
-        <font-awesome-icon icon="fa-regular fa-file-lines" />
-        20 Lessons
+        <font-awesome-icon
+          icon="fa-regular fa-file-lines"
+          class="icon-lessons"
+        />
+        {{ infoCourses.lessons }}
       </small>
-      <small>
-        <font-awesome-icon icon="fa-solid fa-stamp" />
-        50 Students
+      <small class="courses-card__info--students">
+        <font-awesome-icon icon="fa-solid fa-stamp" class="icon-students" />
+        {{ infoCourses.students }}
       </small>
     </div>
   </div>
@@ -38,11 +45,22 @@ export default {
     border-radius: 50%;
     object-fit: cover;
   }
-  .text-green {
-    color: var(--primary-color);
-  }
-  .courses-card__info--title {
-    color: var(--second-text-color);
+  .courses-card__info {
+    margin: 0 1.5rem;
+    .courses-card__info--price {
+      color: var(--primary-color);
+    }
+    .courses-card__info--title {
+      color: var(--second-text-color);
+      margin: 1rem 0;
+    }
+    .courses-card__info--students {
+      margin-left: 1.5rem;
+    }
+    .icon-lessons,
+    .icon-students {
+      margin-right: 0.3125rem;
+    }
   }
 }
 </style>

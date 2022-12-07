@@ -2,6 +2,7 @@
 import AppHero from "./AppHero.vue";
 import CoursesSection from "./CoursesSection.vue";
 import TutoringSection from "./TutoringSection.vue";
+import GetStartedSection from "./GetStartedSection.vue";
 
 export default {
   name: "AppMain",
@@ -9,6 +10,7 @@ export default {
     AppHero,
     CoursesSection,
     TutoringSection,
+    GetStartedSection,
   },
 };
 </script>
@@ -17,6 +19,7 @@ export default {
   <AppHero />
   <CoursesSection />
   <TutoringSection />
+  <GetStartedSection />
 </template>
 
 <style lang="scss" scoped></style>

@@ -67,7 +67,7 @@ export default {
             </a>
           </small>
         </div>
-        <div class="col-small60">
+        <div class="col-big60">
           <img
             class="hero-image"
             src="../../assets/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
@@ -140,7 +140,7 @@ export default {
         }
       }
     }
-    .col-small60 {
+    .col-big60 {
       width: 60%;
       text-align: right;
       position: relative;
@@ -156,7 +156,7 @@ export default {
         height: 3.75rem;
         border-radius: 50%;
         border: 0.625rem solid #ecc5ab;
-        bottom: 20%;
+        bottom: 15%;
       }
       .bg-img {
         position: absolute;

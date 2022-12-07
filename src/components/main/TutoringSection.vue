@@ -63,6 +63,8 @@ export default {
     .tutoring-section-header__title {
       font-size: 1.7rem;
       color: var(--second-text-color);
+      margin-top: 0.5rem;
+
       .text-green {
         color: var(--primary-color);
         font-weight: 400;
@@ -73,7 +75,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -2rem;
-    padding: 4rem 0;
+    padding-top: 4rem;
     .col {
       width: calc(100% / 3);
     }

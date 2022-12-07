@@ -111,6 +111,7 @@ export default {
   .courses-section-header__title {
     font-size: 1.7rem;
     color: var(--second-text-color);
+    margin-top: 0.5rem;
   }
   .row {
     display: flex;

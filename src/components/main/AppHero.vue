@@ -77,7 +77,19 @@ export default {
             <img
               v-for="n in 2"
               src="../../assets/img/maxcoach-shape-08.png"
-              class="grey-dots__item"
+              class="grey-dots__img"
+            />
+          </div>
+          <div class="bg-img green-crosses">
+            <img
+              src="../../assets/img/maxcoach-shape-07.png"
+              class="green-crosses__img"
+            />
+          </div>
+          <div class="bg-img incomplete-circles">
+            <img
+              src="../../assets/img/maxcoach-shape-02.png"
+              class="incomplete-circles__img"
             />
           </div>
         </div>
@@ -132,19 +144,43 @@ export default {
       width: 60%;
       text-align: right;
       position: relative;
+
       .hero-image {
         border-radius: 50%;
       }
+      .grey-dots::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 50%;
+        border: 0.625rem solid #ecc5ab;
+        bottom: 20%;
+      }
       .bg-img {
         position: absolute;
-        top: 40%;
-        left: -6%;
-        z-index: -1;
-        transform: translate(50%, -50%);
-        transform: rotate(270deg);
 
-        .grey-dots__item {
-          margin-right: 1rem;
+        &.grey-dots {
+          top: 40%;
+          left: -6%;
+          z-index: -1;
+          transform: translate(50%, -50%);
+          transform: rotate(270deg);
+
+          .grey-dots__img {
+            margin-right: 1rem;
+          }
+        }
+        &.green-crosses {
+          bottom: 1%;
+          right: 10%;
+          z-index: -1;
+        }
+
+        &.incomplete-circles {
+          top: 20%;
+          right: -17%;
         }
       }
     }

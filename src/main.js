@@ -13,6 +13,7 @@ import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faFileLines } from "@fortawesome/free-regular-svg-icons";
 
 /* import same icons with different style (use alias) */
 
@@ -22,7 +23,8 @@ library.add(
   faCircleUser,
   faMagnifyingGlass,
   faDownload,
-  faArrowRightLong
+  faArrowRightLong,
+  faFileLines
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

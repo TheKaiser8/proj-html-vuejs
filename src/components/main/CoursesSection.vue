@@ -121,7 +121,7 @@ export default {
 
     .col {
       width: calc(100% / 2);
-      padding: 2rem;
+      padding: 1rem;
     }
   }
   .btn-green {

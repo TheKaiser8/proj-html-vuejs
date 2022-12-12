@@ -23,3 +23,8 @@
   background-color: $bg;
   color: $color;
 }
+@mixin btn-hover($bg) {
+  &:hover {
+    background-color: $bg;
+  }
+}

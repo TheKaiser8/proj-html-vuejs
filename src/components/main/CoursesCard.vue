@@ -39,6 +39,8 @@ export default {
 .courses-card {
   display: flex;
   align-items: center;
+  padding: 1.25rem;
+
   .courses-card__img {
     height: 10.625rem;
     width: 10.625rem;
@@ -60,6 +62,14 @@ export default {
     .icon-lessons,
     .icon-students {
       margin-right: 0.3125rem;
+    }
+  }
+  // on-hover courses-card
+  &:hover {
+    background-color: var(--third-bg-color);
+    border-radius: 0.3125rem;
+    .courses-card__info--title {
+      color: var(--primary-color);
     }
   }
 }

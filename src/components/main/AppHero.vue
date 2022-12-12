@@ -125,7 +125,7 @@ export default {
       }
       .btn-green {
         @include btn-bg-color(var(--primary-color), #fff);
-
+        @include btn-hover(var(--second-text-color));
         .download-icon {
           margin-right: 0.75rem;
         }
